@@ -6,13 +6,14 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.pixelpacker.FishingAquaticaExpanded;
 import net.pixelpacker.blocks.crates.BasicCrate;
 import net.minecraft.block.Block;
 
 public class BlockReg {
-    public static final Block BASIC_CRATE = new BasicCrate(FabricBlockSettings.create().strength(2.0f));
+    public static final Block BASIC_CRATE = new BasicCrate(FabricBlockSettings.create().strength(2.0f).sounds(BlockSoundGroup.WOOD));
     public static BlockItem BASIC_CRATE_ITEM;
     public void registerBlocks(){
         register("basic_crate", BASIC_CRATE, BASIC_CRATE_ITEM);
