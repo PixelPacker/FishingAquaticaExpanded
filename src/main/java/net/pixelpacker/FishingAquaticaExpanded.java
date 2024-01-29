@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.pixelpacker.registers.BlockReg;
 import net.pixelpacker.registers.ItemGroupRegister;
+import net.pixelpacker.registers.ItemReg;
+import net.pixelpacker.registers.TagReg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,12 +23,14 @@ public class FishingAquaticaExpanded implements ModInitializer {
 	public static final Random rand = new Random();
 	public static final BlockReg blockReg = new BlockReg();
 	public static final ItemGroupRegister itemGroupReg = new ItemGroupRegister();
-
+	public static final ItemReg itemReg = new ItemReg();
+	public static final TagReg tagReg = new TagReg();
 
 
 	@Override
 	public void onInitialize() {
 		blockReg.registerBlocks();
+		itemReg.registerItems();
 		itemGroupReg.register();
 		LOGGER.info("Making fishing better one step at a time.");
 	}
