@@ -1,11 +1,6 @@
 package net.pixelpacker;
 
 import net.fabricmc.api.ModInitializer;
-
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
 import net.pixelpacker.registers.BlockReg;
 import net.pixelpacker.registers.ItemGroupRegister;
 import net.pixelpacker.registers.ItemReg;

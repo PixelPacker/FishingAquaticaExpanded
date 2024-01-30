@@ -1,0 +1,6 @@
+{
+  "parent": "fishingaquaticaexpanded:item/loot_crate_fishing_rod",
+  "textures": {
+    "layer0": "fishingaquaticaexpanded:item/loot_crate_fishing_rod_cast"
+  }
+}
