@@ -19,7 +19,6 @@ public class FishingAquaticaExpanded implements ModInitializer {
 	public static final BlockReg blockReg = new BlockReg();
 	public static final ItemGroupRegister itemGroupReg = new ItemGroupRegister();
 	public static final ItemReg itemReg = new ItemReg();
-	public static final TagReg tagReg = new TagReg();
 
 
 	@Override

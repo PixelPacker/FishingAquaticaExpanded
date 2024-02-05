@@ -15,6 +15,7 @@ public class ItemGroupRegister {
             .displayName(Text.translatable("itemGroup.fishingaquaticaexpanded.item_group"))
             .entries((context, entries) -> {
                 entries.add(BlockReg.BASIC_CRATE);
+                entries.add(BlockReg.SPICY_CRATE);
                 entries.add(ItemReg.LOOT_CRATE_FISHING_ROD);
             })
             .build();

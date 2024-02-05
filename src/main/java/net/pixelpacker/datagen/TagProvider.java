@@ -20,5 +20,8 @@ public class TagProvider extends FabricTagProvider.ItemTagProvider{
         getOrCreateTagBuilder(TagReg.FISHING_RODS)
                 .add(Items.FISHING_ROD)
                 .add(ItemReg.LOOT_CRATE_FISHING_ROD);
+
+        getOrCreateTagBuilder(TagReg.T1_LOOT_CRATE_RODS)
+                .add(ItemReg.LOOT_CRATE_FISHING_ROD);
     }
 }
