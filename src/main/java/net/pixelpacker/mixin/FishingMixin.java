@@ -17,7 +17,7 @@ import static net.pixelpacker.util.crates.DetermineLootCrate.chooseCrate;
 
 @Mixin(FishingBobberEntity.class)
 public abstract class FishingMixin {
-    @Shadow @Nullable public abstract Pla syerEntity getPlayerOwner();
+    @Shadow @Nullable public abstract PlayerEntity getPlayerOwner();
 
     @Inject(method = "use", at = @At(value = "RETURN", target = "Lnet/minecraft/entity/projectile/FishingBobberEntity;use(Lnet/minecraft/item/ItemStack;)I"))
     public void use(ItemStack usedItem, CallbackInfoReturnable<Integer> cir){
