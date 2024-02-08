@@ -1,4 +1,4 @@
-package net.pixelpacker.mixin;
+package net.pixelpacker.mixin.fishing;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FishingBobberEntity;

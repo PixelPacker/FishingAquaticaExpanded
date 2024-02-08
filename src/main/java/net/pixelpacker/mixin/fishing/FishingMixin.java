@@ -1,4 +1,4 @@
-package net.pixelpacker.mixin;
+package net.pixelpacker.mixin.fishing;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;

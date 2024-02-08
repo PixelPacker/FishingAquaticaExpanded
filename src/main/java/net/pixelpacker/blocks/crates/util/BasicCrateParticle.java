@@ -6,9 +6,10 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.pixelpacker.FishingAquaticaExpanded;
+import net.pixelpacker.blocks.crates.util.interfaces.CrateParticle;
 import org.joml.Vector3d;
 
-public class CrateParticles {
+public class BasicCrateParticle implements CrateParticle {
 
     public int maxParticles = 5;
 
@@ -18,14 +19,26 @@ public class CrateParticles {
      * @param world Must be server world due to particle effects.
      * @param pos The position of the crate that was broken.
      */
+    @Override
     public void spawnParticles(ServerWorld world, BlockPos pos){
-        pSpawn(ParticleTypes.EXPLOSION, world, pos);
-        pSpawn(ParticleTypes.SMOKE, world, pos);
+        spawn(ParticleTypes.EXPLOSION, world, pos);
+        spawn(ParticleTypes.SMOKE, world, pos);
     }
 
-    private void pSpawn(ParticleEffect particleType, ServerWorld world, BlockPos pos){
+    public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int speed){
         Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
-        world.spawnParticles(particleType, pos.getX(), pos.getY(), pos.getZ(), randomizeAmount(), particleVel.x, particleVel.y, particleVel.z, 0);
+        world.spawnParticles(particleType, pos.getX(), pos.getY(), pos.getZ(), randomizeAmount(), particleVel.x, particleVel.y, particleVel.z, speed);
+        if(FishingAquaticaExpanded.DebugMode){
+            FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
+        }
+    }
+
+    public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int speed, int amount){
+        Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
+        int i = 0;
+        while(i++ < amount){
+            world.spawnParticles(particleType, pos.getX(), pos.getY(), pos.getZ(), randomizeAmount(), particleVel.x, particleVel.y, particleVel.z, speed);
+        }
         if(FishingAquaticaExpanded.DebugMode){
             FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
         }

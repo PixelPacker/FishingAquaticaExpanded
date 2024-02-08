@@ -11,11 +11,13 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pixelpacker.FishingAquaticaExpanded;
+import net.pixelpacker.blocks.crates.util.interfaces.CrateParticle;
+import net.pixelpacker.blocks.crates.util.interfaces.CrateSound;
 import org.jetbrains.annotations.Nullable;
 
 public class Crate extends Block {
     public CrateSound crateSound;
-    public CrateParticles crateParticles;
+    public CrateParticle crateParticle;
 
     public Crate(Settings settings) {
         super(settings);
@@ -40,11 +42,11 @@ public class Crate extends Block {
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         setCrateSound();
-        setCrateParticles();
+        setCrateParticle();
     }
 
     public void spawnCrateParticles(ServerWorld world, BlockPos pos){
-        crateParticles.spawnParticles(world, pos);
+        crateParticle.spawnParticles(world, pos);
     }
 
     public void playCrateSound(ServerWorld world, BlockPos pos){
@@ -56,11 +58,11 @@ public class Crate extends Block {
      *<h3>Sets the CrateSound class for the crate.</h3>
      *<p>Overwrite this to change the sounds of the crate</p>
      */
-    public void setCrateSound(){ crateSound = new CrateSound(); }
+    public void setCrateSound(){ crateSound = new BasicCrateSound(); }
 
     /**
      *<h3>Sets the CrateParticles class for the crate.</h3>
      *<p>Overwrite this to change the particles of the crate</p>
      */
-    public void setCrateParticles(){ crateParticles = new CrateParticles(); }
+    public void setCrateParticle(){ crateParticle = new BasicCrateParticle(); }
 }
