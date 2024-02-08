@@ -8,9 +8,9 @@ import net.pixelpacker.blocks.crates.util.BasicCrateParticle;
 public class SparkleCrateParticle extends BasicCrateParticle {
     @Override
     public void spawnParticles(ServerWorld world, BlockPos pos){
-        spawn(ParticleTypes.FLASH, world, pos, 0, 2);
-        spawn(ParticleTypes.ELECTRIC_SPARK, world, pos, 0, 10);
-        spawn(ParticleTypes.POOF, world, pos, 0, 2);
-        spawn(ParticleTypes.SMOKE, world, pos, 0);
+        spawn(ParticleTypes.FLASH, world, pos);
+        spawn(ParticleTypes.FIREWORK, world, pos, 50, 0.1f);
+        spawn(ParticleTypes.POOF, world, pos, 3);
+        spawn(ParticleTypes.SMOKE, world, pos);
     }
 }

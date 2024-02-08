@@ -5,14 +5,12 @@ import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.pixelpacker.FishingAquaticaExpanded;
 import net.pixelpacker.blocks.crates.util.interfaces.CrateParticle;
 import org.joml.Vector3d;
 
 public class BasicCrateParticle implements CrateParticle {
-
-    public int maxParticles = 5;
-
     /**
      * <h3>Spawns particles at target location</h3>
      * <p>Can be overwritten to allow for different effects for different crates</p>
@@ -21,34 +19,39 @@ public class BasicCrateParticle implements CrateParticle {
      */
     @Override
     public void spawnParticles(ServerWorld world, BlockPos pos){
-        spawn(ParticleTypes.EXPLOSION, world, pos);
-        spawn(ParticleTypes.SMOKE, world, pos);
+        spawn(ParticleTypes.EXPLOSION, world, pos, 0);
+        spawn(ParticleTypes.SMOKE, world, pos, 0);
     }
 
-    public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int speed){
+    public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos){
         Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
-        world.spawnParticles(particleType, pos.getX(), pos.getY(), pos.getZ(), randomizeAmount(), particleVel.x, particleVel.y, particleVel.z, speed);
+        Vec3d loc = Vec3d.ofCenter(pos);
+        world.spawnParticles(particleType, loc.x, loc.y, loc.z, 1, particleVel.x, particleVel.y, particleVel.z, 0);
         if(FishingAquaticaExpanded.DebugMode){
             FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
         }
     }
 
-    public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int speed, int amount){
+    public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int amount){
         Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
-        int i = 0;
-        while(i++ < amount){
-            world.spawnParticles(particleType, pos.getX(), pos.getY(), pos.getZ(), randomizeAmount(), particleVel.x, particleVel.y, particleVel.z, speed);
-        }
+        Vec3d loc = Vec3d.ofCenter(pos);
+        world.spawnParticles(particleType, loc.x, loc.y, loc.z, amount, particleVel.x, particleVel.y, particleVel.z, 0);
+        particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
         if(FishingAquaticaExpanded.DebugMode){
             FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
         }
     }
 
+    public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int amount, float speed){
+        Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
+        Vec3d loc = Vec3d.ofCenter(pos);
+        world.spawnParticles(particleType, loc.x, loc.y, loc.z, amount, particleVel.x, particleVel.y, particleVel.z, speed);
+        particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
+        if(FishingAquaticaExpanded.DebugMode){
+            FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
+        }
+    }
     public float randomizeVel(){
         return FishingAquaticaExpanded.rand.nextFloat(-0.1f, 0.11f);
-    }
-
-    public int randomizeAmount(){
-        return FishingAquaticaExpanded.rand.nextInt(1, 5+1);
     }
 }
