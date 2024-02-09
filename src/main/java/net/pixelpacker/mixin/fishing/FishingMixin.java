@@ -35,7 +35,7 @@ public abstract class FishingMixin {
             FishingAquaticaExpanded.LOGGER.info("Rolled: " + randomChance);
         }
         if(usedItem.getItem() == ItemReg.LOOT_CRATE_FISHING_ROD){
-            int chanceToGetLootCrate = 100;
+            int chanceToGetLootCrate = FishingAquaticaExpanded.CONFIG.crateChance();
             if(getPlayerOwner() != null && randomChance <= chanceToGetLootCrate + luckOfTheSeaLevel){
                 ItemStack chosenCrate = chooseCrate(usedItem);
                 getPlayerOwner().giveItemStack(chosenCrate);

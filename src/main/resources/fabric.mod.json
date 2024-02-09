@@ -2,16 +2,16 @@
 	"schemaVersion": 1,
 	"id": "fishingaquaticaexpanded",
 	"version": "${version}",
-	"name": "FishingAquaticaExpanded",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Fishing Aquatica Expanded",
+	"description": "Making fishing more interesting one step at a time.",
 	"authors": [
-		"Me!"
+		"PixelPacker"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://discord.gg/ZwyHBkfRgd",
+		"sources": "https://github.com/PixelPacker/FishingAquatica"
 	},
-	"license": "CC0-1.0",
+	"license": "GNU AGPLv3",
 	"icon": "assets/fishingaquaticaexpanded/icon.png",
 	"environment": "*",
 	"entrypoints": {

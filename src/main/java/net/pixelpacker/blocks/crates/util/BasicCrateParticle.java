@@ -19,37 +19,26 @@ public class BasicCrateParticle implements CrateParticle {
      */
     @Override
     public void spawnParticles(ServerWorld world, BlockPos pos){
-        spawn(ParticleTypes.EXPLOSION, world, pos, 0);
-        spawn(ParticleTypes.SMOKE, world, pos, 0);
+        spawn(ParticleTypes.EXPLOSION, world, pos);
+        spawn(ParticleTypes.SMOKE, world, pos);
     }
 
     public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos){
         Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
         Vec3d loc = Vec3d.ofCenter(pos);
         world.spawnParticles(particleType, loc.x, loc.y, loc.z, 1, particleVel.x, particleVel.y, particleVel.z, 0);
-        if(FishingAquaticaExpanded.DebugMode){
-            FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
-        }
     }
 
     public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int amount){
         Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
         Vec3d loc = Vec3d.ofCenter(pos);
         world.spawnParticles(particleType, loc.x, loc.y, loc.z, amount, particleVel.x, particleVel.y, particleVel.z, 0);
-        particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
-        if(FishingAquaticaExpanded.DebugMode){
-            FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
-        }
     }
 
     public void spawn(ParticleEffect particleType, ServerWorld world, BlockPos pos, int amount, float speed){
         Vector3d particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
         Vec3d loc = Vec3d.ofCenter(pos);
         world.spawnParticles(particleType, loc.x, loc.y, loc.z, amount, particleVel.x, particleVel.y, particleVel.z, speed);
-        particleVel = new Vector3d(randomizeVel(), randomizeVel(), randomizeVel());
-        if(FishingAquaticaExpanded.DebugMode){
-            FishingAquaticaExpanded.LOGGER.info("Particle Vel x:" + particleVel.x);
-        }
     }
     public float randomizeVel(){
         return FishingAquaticaExpanded.rand.nextFloat(-0.1f, 0.11f);

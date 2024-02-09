@@ -31,6 +31,9 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("fishingaquaticaexpanded:item_group")), "Fishing Aquatica Expanded");
 
+        translationBuilder.add("text.config.fae-config.title", "Fishing Aquatica Expanded");
+        translationBuilder.add("text.config.fae-config.option.crateChance", "Crate Chance");
+        translationBuilder.add("text.config.fae-config.option.debugMode", "Debug Mode");
 
         try {
             String filePathString = dataOutput.getModContainer().findPath("assets/fishingaquaticaexpanded/lang/en_us.json").get().toString();
