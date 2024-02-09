@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static net.pixelpacker.util.crates.DetermineLootCrate.chooseCrate;
+import static net.pixelpacker.crates.util.DetermineLootCrate.chooseCrate;
 
 @Mixin(FishingBobberEntity.class)
 public abstract class FishingMixin {

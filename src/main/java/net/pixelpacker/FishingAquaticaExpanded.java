@@ -1,11 +1,10 @@
 package net.pixelpacker;
 
 import net.fabricmc.api.ModInitializer;
-import net.pixelpacker.blocks.crates.util.config.FAEConfig;
 import net.pixelpacker.registers.BlockReg;
 import net.pixelpacker.registers.ItemGroupRegister;
 import net.pixelpacker.registers.ItemReg;
-import net.pixelpacker.registers.TagReg;
+import net.pixelpacker.util.config.FAEConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +15,7 @@ public class FishingAquaticaExpanded implements ModInitializer {
 	public static final String MODID = "fishingaquaticaexpanded";
 	public static final FAEConfig CONFIG = FAEConfig.createAndLoad();
 	public static final Boolean DebugMode = CONFIG.debugMode();
+
 
 	public static final Random rand = new Random();
 	public static final BlockReg blockReg = new BlockReg();

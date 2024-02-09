@@ -6,11 +6,11 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.pixelpacker.FishingAquaticaExpanded;
-import net.pixelpacker.items.fishingrods.LootCrateFishingRod;
+import net.pixelpacker.items.fishingrods.LootCrateFishingRodItem;
 
 public class ItemReg {
 
-    public static final LootCrateFishingRod LOOT_CRATE_FISHING_ROD = new LootCrateFishingRod(new FabricItemSettings());
+    public static final LootCrateFishingRodItem LOOT_CRATE_FISHING_ROD = new LootCrateFishingRodItem(new FabricItemSettings().maxCount(1).maxDamage(426));
 
     public void registerItems(){
         register("loot_crate_fishing_rod", LOOT_CRATE_FISHING_ROD);

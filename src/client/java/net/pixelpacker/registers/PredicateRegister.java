@@ -3,7 +3,7 @@ package net.pixelpacker.registers;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
-import net.pixelpacker.items.fishingrods.LootCrateFishingRod;
+import net.pixelpacker.items.fishingrods.LootCrateFishingRodItem;
 
 public class PredicateRegister extends ModelPredicateProviderRegistry {
 
@@ -14,7 +14,7 @@ public class PredicateRegister extends ModelPredicateProviderRegistry {
             } else {
                 boolean bl = entity.getMainHandStack() == stack;
                 boolean bl2 = entity.getOffHandStack() == stack;
-                if (entity.getMainHandStack().getItem() instanceof LootCrateFishingRod) {
+                if (entity.getMainHandStack().getItem() instanceof LootCrateFishingRodItem) {
                     bl2 = false;
                 }
 
