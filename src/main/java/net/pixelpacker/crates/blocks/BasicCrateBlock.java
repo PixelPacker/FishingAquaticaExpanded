@@ -1,8 +1,6 @@
 package net.pixelpacker.crates.blocks;
 
-import net.pixelpacker.crates.util.Crate;
-
-public class BasicCrateBlock extends Crate {
+public class BasicCrateBlock extends CrateBlock {
     public BasicCrateBlock(Settings settings) {
         super(settings);
     }

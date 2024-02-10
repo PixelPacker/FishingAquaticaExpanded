@@ -2,9 +2,8 @@ package net.pixelpacker.crates.blocks;
 
 import net.pixelpacker.crates.particles.SparkleCrateParticle;
 import net.pixelpacker.crates.sounds.SparkleCrateSound;
-import net.pixelpacker.crates.util.Crate;
 
-public class SpicyCrateBlock extends Crate {
+public class SpicyCrateBlock extends CrateBlock {
     public SpicyCrateBlock(Settings settings) {
         super(settings);
     }

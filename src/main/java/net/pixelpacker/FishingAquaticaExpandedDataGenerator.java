@@ -2,6 +2,7 @@ package net.pixelpacker;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.pixelpacker.util.datagen.tables.FishingCrateTablesProvider;
 import net.pixelpacker.util.datagen.tags.BlockTagProvider;
 import net.pixelpacker.util.datagen.lang.EnglishLangProvider;
 import net.pixelpacker.util.datagen.RecipeGenerator;
@@ -19,5 +20,6 @@ public class FishingAquaticaExpandedDataGenerator implements DataGeneratorEntryp
 		pack.addProvider(EnglishLangProvider::new);
 		pack.addProvider(RecipeGenerator::new);
 		pack.addProvider(CrateLootTablesProvider::new);
+		pack.addProvider(FishingCrateTablesProvider::new);
 	}
 }

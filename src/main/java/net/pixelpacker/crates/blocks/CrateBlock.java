@@ -1,4 +1,4 @@
-package net.pixelpacker.crates.util;
+package net.pixelpacker.crates.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -17,11 +17,11 @@ import net.pixelpacker.crates.util.interfaces.CrateParticle;
 import net.pixelpacker.crates.util.interfaces.CrateSound;
 import org.jetbrains.annotations.Nullable;
 
-public class Crate extends Block{
+public class CrateBlock extends Block{
     public CrateSound crateSound;
     public CrateParticle crateParticle;
 
-    public Crate(Settings settings) {
+    public CrateBlock(Settings settings) {
         super(settings);
     }
 
