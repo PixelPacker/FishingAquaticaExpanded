@@ -44,6 +44,7 @@ public abstract class FishingMixin extends ProjectileEntity{
             }
             return;
         }
+
         PlayerEntity player = getPlayerOwner();
         MinecraftServer server = this.getServer();
         int randomChance = FishingAquaticaExpanded.rand.nextInt(101);
@@ -51,6 +52,7 @@ public abstract class FishingMixin extends ProjectileEntity{
         if(FishingAquaticaExpanded.DebugMode){
             FishingAquaticaExpanded.LOGGER.info("Rolled: " + randomChance);
         }
+
         if(usedItem.getItem() == ItemReg.LOOT_CRATE_FISHING_ROD){
             int chanceToGetLootCrate = FishingAquaticaExpanded.CONFIG.crateChance();
             if(player != null && server != null && randomChance <= chanceToGetLootCrate + luckOfTheSeaLevel){
