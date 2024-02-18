@@ -6,12 +6,8 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fishingaquaticaexpanded:basic_crate",
+          "name": "fishingaquaticaexpanded:miner_crate",
           "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishingaquaticaexpanded:spicy_crate"
         }
       ],
       "functions": [

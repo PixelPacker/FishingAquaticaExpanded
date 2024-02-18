@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "fishingaquaticaexpanded:block/spicy_crate"
+    "all": "fishingaquaticaexpanded:block/miner_crate"
   }
 }

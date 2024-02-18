@@ -1,6 +1,5 @@
 {
-  "block.fishingaquaticaexpanded.basic_crate": "Basic Crate",
-  "block.fishingaquaticaexpanded.spicy_crate": "Spicy Crate",
+  "block.fishingaquaticaexpanded.miner_crate": "Miner's Haul Crate",
   "item.fishingaquaticaexpanded.loot_crate_fishing_rod": "Loot Crate Fishing Rod",
   "itemGroup.fishingaquaticaexpanded.item_group": "Fishing Aquatica Expanded",
   "text.config.fae-config.option.crateChance": "Crate Chance",

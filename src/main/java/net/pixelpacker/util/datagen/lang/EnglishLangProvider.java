@@ -24,8 +24,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
 
-        translationBuilder.add(BlockReg.BASIC_CRATE, "Basic Crate");
-        translationBuilder.add(BlockReg.SPICY_CRATE, "Spicy Crate");
+        translationBuilder.add(BlockReg.MINER_CRATE, "Miner's Haul Crate");
 
         translationBuilder.add(ItemReg.LOOT_CRATE_FISHING_ROD, "Loot Crate Fishing Rod");
 

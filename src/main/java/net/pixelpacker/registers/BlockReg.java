@@ -11,14 +11,13 @@ import net.minecraft.util.Identifier;
 import net.pixelpacker.FishingAquaticaExpanded;
 import net.pixelpacker.crates.blocks.BasicCrateBlock;
 import net.minecraft.block.Block;
+import net.pixelpacker.crates.blocks.MinerCrate;
 import net.pixelpacker.crates.blocks.SpicyCrateBlock;
 
 public class BlockReg {
-    public static final Block BASIC_CRATE = new BasicCrateBlock(FabricBlockSettings.create().strength(2.0f).sounds(BlockSoundGroup.WOOD));
-    public static final Block SPICY_CRATE = new SpicyCrateBlock(FabricBlockSettings.create().strength(2.0f).sounds(BlockSoundGroup.WOOD));
+    public static final Block MINER_CRATE = new MinerCrate(FabricBlockSettings.create().strength(2.0f).sounds(BlockSoundGroup.WOOD));
     public void registerBlocks(){
-        register("basic_crate", BASIC_CRATE);
-        register("spicy_crate", SPICY_CRATE);
+        register("miner_crate", MINER_CRATE);
     }
 
     private void register(String blockName, Block block){

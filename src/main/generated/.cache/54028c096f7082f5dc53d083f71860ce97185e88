@@ -1,3 +1,2 @@
-// 1.20.4	2024-02-09T19:13:01.459369	Fishing Aquatica Expanded/Block Loot Tables
-b0627a72287a24a88ea959082c5c280dfc824128 data/fishingaquaticaexpanded/loot_tables/blocks/basic_crate.json
-c62e48d13c9447c46ef9076e7b318e1f85df557c data/fishingaquaticaexpanded/loot_tables/blocks/spicy_crate.json
+// 1.20.4	2024-02-17T20:00:30.941898	Fishing Aquatica Expanded/Block Loot Tables
+6f609a4d39aa612859cdafdf74ddcbdbbfc78eba data/fishingaquaticaexpanded/loot_tables/blocks/miner_crate.json

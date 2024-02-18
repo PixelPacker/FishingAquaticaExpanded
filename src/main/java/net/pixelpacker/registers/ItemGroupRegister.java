@@ -11,11 +11,10 @@ import net.pixelpacker.FishingAquaticaExpanded;
 
 public class ItemGroupRegister {
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(BlockReg.BASIC_CRATE))
+            .icon(() -> new ItemStack(BlockReg.MINER_CRATE))
             .displayName(Text.translatable("itemGroup.fishingaquaticaexpanded.item_group"))
             .entries((context, entries) -> {
-                entries.add(BlockReg.BASIC_CRATE);
-                entries.add(BlockReg.SPICY_CRATE);
+                entries.add(BlockReg.MINER_CRATE);
                 entries.add(ItemReg.LOOT_CRATE_FISHING_ROD);
             })
             .build();

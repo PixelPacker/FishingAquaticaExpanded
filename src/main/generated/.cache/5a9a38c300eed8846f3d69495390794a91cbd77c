@@ -1,7 +1,4 @@
-// 1.20.4	2024-02-09T19:13:01.461526	Fishing Aquatica Expanded/Model Definitions
-0b304ae227aac3519d52d54155459eeb87bb6060 assets/fishingaquaticaexpanded/models/item/spicy_crate.json
-8daa3a8623c0fe4b688c2f500619f572ebdae376 assets/fishingaquaticaexpanded/models/item/basic_crate.json
-d35b2f4dbc32de8615ec35ce17b090abb36af43d assets/fishingaquaticaexpanded/blockstates/basic_crate.json
-c909fd595c3b77f1f4a283a544692508e42dacc2 assets/fishingaquaticaexpanded/blockstates/spicy_crate.json
-f1e5a9cae8d0ade764f14f14857762449a9cb2b7 assets/fishingaquaticaexpanded/models/block/spicy_crate.json
-3c5ba8003fe59c832ba1d02769fb08db6e4f7617 assets/fishingaquaticaexpanded/models/block/basic_crate.json
+// 1.20.4	2024-02-17T20:00:30.942623	Fishing Aquatica Expanded/Model Definitions
+a32ee33b92ecd9781c299b9a60ef732d15f8ddfd assets/fishingaquaticaexpanded/models/block/miner_crate.json
+d0049a4dd308049774ad5003cbcee5c6f26d879f assets/fishingaquaticaexpanded/blockstates/miner_crate.json
+f5e5a9dd5822a01d1d3d0643861e5e69edc98cad assets/fishingaquaticaexpanded/models/item/miner_crate.json
