@@ -1,4 +1,7 @@
-// 1.20.4	2024-02-17T20:00:30.942623	Fishing Aquatica Expanded/Model Definitions
+// 1.20.4	2024-02-17T21:22:44.302996	Fishing Aquatica Expanded/Model Definitions
 a32ee33b92ecd9781c299b9a60ef732d15f8ddfd assets/fishingaquaticaexpanded/models/block/miner_crate.json
+1e6d407e7430832cb11642d01f7a5879004d844d assets/fishingaquaticaexpanded/models/block/monster_crate.json
+5478d28fab32a22cbee515bf1dee11a154d46f36 assets/fishingaquaticaexpanded/blockstates/monster_crate.json
 d0049a4dd308049774ad5003cbcee5c6f26d879f assets/fishingaquaticaexpanded/blockstates/miner_crate.json
+08b985891d739b7bf85b4ab7bf10e868b1ae866a assets/fishingaquaticaexpanded/models/item/monster_crate.json
 f5e5a9dd5822a01d1d3d0643861e5e69edc98cad assets/fishingaquaticaexpanded/models/item/miner_crate.json

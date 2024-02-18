@@ -8,6 +8,11 @@
           "type": "minecraft:item",
           "name": "fishingaquaticaexpanded:miner_crate",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishingaquaticaexpanded:monster_crate",
+          "weight": 2
         }
       ],
       "functions": [

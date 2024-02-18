@@ -23,9 +23,13 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
+        //Blocks
 
+        //Crates
         translationBuilder.add(BlockReg.MINER_CRATE, "Miner's Haul Crate");
+        translationBuilder.add(BlockReg.MONSTER_CRATE, "Monster Hunter's Crate");
 
+        //Items
         translationBuilder.add(ItemReg.LOOT_CRATE_FISHING_ROD, "Loot Crate Fishing Rod");
 
         translationBuilder.add(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("fishingaquaticaexpanded:item_group")), "Fishing Aquatica Expanded");

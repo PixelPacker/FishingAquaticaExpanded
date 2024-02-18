@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "fishingaquaticaexpanded:monster_crate",
     "fishingaquaticaexpanded:miner_crate"
   ]
 }

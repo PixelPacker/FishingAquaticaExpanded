@@ -26,6 +26,7 @@ public class FishingCrateTablesProvider extends SimpleFabricLootTableProvider {
                 .rolls(ConstantLootNumberProvider.create(1.0f))
                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
                 .with(ItemEntry.builder(BlockReg.MINER_CRATE).weight(2))
+                .with(ItemEntry.builder(BlockReg.MONSTER_CRATE).weight(2))
         ));
     }
 }
