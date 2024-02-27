@@ -2,14 +2,11 @@ package net.pixelpacker.util.datagen.tables;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.BinomialLootNumberProvider;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.pixelpacker.registers.BlockReg;
 
@@ -35,8 +32,8 @@ public class CrateLootTablesProvider extends FabricBlockLootTableProvider {
         ));
 
         addDrop(BlockReg.MONSTER_CRATE, LootTable.builder().pool(LootPool.builder()
-                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f)))
-                .rolls(UniformLootNumberProvider.create(4, 6))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))
+                .rolls(UniformLootNumberProvider.create(2, 4))
                     .with(ItemEntry.builder(Items.GHAST_TEAR).weight(1))
                     .with(ItemEntry.builder(Items.ENDER_PEARL).weight(1))
                     .with(ItemEntry.builder(Items.PRISMARINE_SHARD).weight(2))
