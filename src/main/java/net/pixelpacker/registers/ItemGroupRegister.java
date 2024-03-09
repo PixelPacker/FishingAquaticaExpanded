@@ -16,6 +16,7 @@ public class ItemGroupRegister {
             .entries((context, entries) -> {
                 entries.add(BlockReg.MINER_CRATE);
                 entries.add(BlockReg.MONSTER_CRATE);
+                entries.add(BlockReg.BLAZING_CRATE);
                 entries.add(ItemReg.LOOT_CRATE_FISHING_ROD);
             })
             .build();

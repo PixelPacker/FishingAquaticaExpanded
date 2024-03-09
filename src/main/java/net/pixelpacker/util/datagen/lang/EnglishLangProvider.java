@@ -28,6 +28,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         //Crates
         translationBuilder.add(BlockReg.MINER_CRATE, "Miner's Haul Crate");
         translationBuilder.add(BlockReg.MONSTER_CRATE, "Monster Hunter's Crate");
+        translationBuilder.add(BlockReg.BLAZING_CRATE, "Blazing Crate");
 
         //Items
         translationBuilder.add(ItemReg.LOOT_CRATE_FISHING_ROD, "Loot Crate Fishing Rod");

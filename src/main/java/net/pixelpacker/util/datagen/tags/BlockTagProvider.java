@@ -17,6 +17,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(BlockReg.MONSTER_CRATE)
-                .add(BlockReg.MINER_CRATE);
+                .add(BlockReg.MINER_CRATE)
+                .add(BlockReg.BLAZING_CRATE);
     }
 }

@@ -25,6 +25,7 @@ public class FishingCrateTablesProvider extends SimpleFabricLootTableProvider {
         exporter.accept(LootTableReg.TIER_ONE_CRATES, LootTable.builder().pool(LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1.0f))
                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
+                .with(ItemEntry.builder(BlockReg.BLAZING_CRATE).weight(1))
                 .with(ItemEntry.builder(BlockReg.MINER_CRATE).weight(2))
                 .with(ItemEntry.builder(BlockReg.MONSTER_CRATE).weight(2))
         ));

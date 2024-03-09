@@ -10,15 +10,18 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.pixelpacker.FishingAquaticaExpanded;
+import net.pixelpacker.crates.blocks.BlazingCrateBlock;
 import net.pixelpacker.crates.blocks.MinerCrateBlock;
 import net.pixelpacker.crates.blocks.MonsterCrateBlock;
 
 public class BlockReg {
     public static final Block MINER_CRATE = new MinerCrateBlock(FabricBlockSettings.create().strength(2.0f).sounds(BlockSoundGroup.WOOD));
     public static final Block MONSTER_CRATE = new MonsterCrateBlock(FabricBlockSettings.create().strength(2.0f).sounds(BlockSoundGroup.WOOD));
+    public static final Block BLAZING_CRATE = new BlazingCrateBlock(FabricBlockSettings.create().strength(2.0f).sounds(BlockSoundGroup.WOOD));
     public void registerBlocks(){
         register("miner_crate", MINER_CRATE);
         register("monster_crate", MONSTER_CRATE);
+        register("blazing_crate", BLAZING_CRATE);
     }
 
     private void register(String blockName, Block block){

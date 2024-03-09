@@ -15,6 +15,7 @@ public class SimpleModelGenerator extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(BlockReg.MINER_CRATE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockReg.MONSTER_CRATE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockReg.BLAZING_CRATE);
     }
 
     @Override

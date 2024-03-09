@@ -2,6 +2,7 @@ package net.pixelpacker.util.datagen.tables;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
@@ -44,6 +45,19 @@ public class CrateLootTablesProvider extends FabricBlockLootTableProvider {
                     .with(ItemEntry.builder(Items.ARROW).weight(3))
                     .with(ItemEntry.builder(Items.BONE).weight(4))
                     .with(ItemEntry.builder(Items.ROTTEN_FLESH).weight(4))
+        ));
+
+        addDrop(BlockReg.BLAZING_CRATE, LootTable.builder().pool(LootPool.builder()
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))
+                .rolls(UniformLootNumberProvider.create(2, 4))
+                    .with(ItemEntry.builder(Items.TNT).weight(1))
+                    .with(ItemEntry.builder(Items.BLAZE_ROD).weight(1))
+                    .with(ItemEntry.builder(Items.BLAZE_POWDER).weight(2))
+                    .with(ItemEntry.builder(Items.MAGMA_CREAM).weight(2))
+                    .with(ItemEntry.builder(Items.COAL).weight(4))
+                    .with(ItemEntry.builder(Items.FLINT).weight(4))
+                    .with(ItemEntry.builder(Items.TORCH).weight(4))
+                    .with(ItemEntry.builder(Items.SOUL_TORCH).weight(4))
         ));
     }
 }
