@@ -8,6 +8,7 @@ import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.pixelpacker.registers.BlockReg;
 
@@ -58,6 +59,22 @@ public class CrateLootTablesProvider extends FabricBlockLootTableProvider {
                     .with(ItemEntry.builder(Items.FLINT).weight(4))
                     .with(ItemEntry.builder(Items.TORCH).weight(4))
                     .with(ItemEntry.builder(Items.SOUL_TORCH).weight(4))
+        ));
+
+        addDrop(BlockReg.MUSIC_CRATE, LootTable.builder().pool(LootPool.builder()
+                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
+                .rolls(ConstantLootNumberProvider.create(1))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_11))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_13))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_BLOCKS))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_CAT))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_CHIRP))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_FAR))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_MALL))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_MELLOHI))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_STAL))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_STRAD))
+                    .with(ItemEntry.builder(Items.MUSIC_DISC_WARD))
         ));
     }
 }

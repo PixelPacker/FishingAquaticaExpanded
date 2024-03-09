@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.pixelpacker.registers.BlockReg;
 import net.pixelpacker.registers.ItemGroupRegister;
 import net.pixelpacker.registers.ItemReg;
+import net.pixelpacker.registers.SoundReg;
 import net.pixelpacker.util.config.FAEConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,12 +22,14 @@ public class FishingAquaticaExpanded implements ModInitializer {
 	public static final BlockReg blockReg = new BlockReg();
 	public static final ItemGroupRegister itemGroupReg = new ItemGroupRegister();
 	public static final ItemReg itemReg = new ItemReg();
+	public static final SoundReg soundReg = new SoundReg();
 
 
 	@Override
 	public void onInitialize() {
 		blockReg.registerBlocks();
 		itemReg.registerItems();
+		soundReg.registerSounds();
 		itemGroupReg.register();
 		LOGGER.info("Making fishing better one step at a time.");
 	}

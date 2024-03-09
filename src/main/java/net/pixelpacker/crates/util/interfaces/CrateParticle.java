@@ -4,5 +4,5 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
 public interface CrateParticle {
-    public void spawnParticles(ServerWorld world, BlockPos pos);
+    void spawnParticles(ServerWorld world, BlockPos pos);
 }

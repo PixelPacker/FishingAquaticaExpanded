@@ -29,15 +29,20 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockReg.MINER_CRATE, "Miner's Haul Crate");
         translationBuilder.add(BlockReg.MONSTER_CRATE, "Monster Hunter's Crate");
         translationBuilder.add(BlockReg.BLAZING_CRATE, "Blazing Crate");
+        translationBuilder.add(BlockReg.MUSIC_CRATE, "Vinyl Collector's Crate");
 
         //Items
         translationBuilder.add(ItemReg.LOOT_CRATE_FISHING_ROD, "Loot Crate Fishing Rod");
 
         translationBuilder.add(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("fishingaquaticaexpanded:item_group")), "Fishing Aquatica Expanded");
 
+        //Configs
         translationBuilder.add("text.config.fae-config.title", "Fishing Aquatica Expanded");
         translationBuilder.add("text.config.fae-config.option.crateChance", "Crate Chance");
         translationBuilder.add("text.config.fae-config.option.debugMode", "Debug Mode");
+
+        //Audio
+        translationBuilder.add("subtitles.fishingaquaticaexpanded.music_crate", "Music Crate Opened");
 
         try {
             String filePathString = dataOutput.getModContainer().findPath("assets/fishingaquaticaexpanded/lang/en_us.json").get().toString();
