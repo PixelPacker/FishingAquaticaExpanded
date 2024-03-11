@@ -1,8 +1,43 @@
 plugins {
 	id 'fabric-loom' version '1.5-SNAPSHOT'
 	id 'maven-publish'
+	id "me.modmuss50.mod-publish-plugin" version "0.5.1"
 }
 
+publishMods {
+	changelog = "Fishing Aquatica Expanded's First Public Release!"
+	type = ALPHA
+	file = remapJar.archiveFile
+	modLoaders.add("fabric")
+
+	curseforge {
+		accessToken = System.getenv("CURSEFORGE_API")
+		projectId = "972797"
+		minecraftVersions.add("1.20.4")
+		projectSlug = "fishing-aquatica-expanded"
+
+		javaVersions.add(JavaVersion.VERSION_17)
+
+		clientRequired = true
+		serverRequired = true
+
+		requires {"fabric-api"}
+		requires {"owo-lib"}
+	}
+
+	modrinth {
+		accessToken = System.getenv("MODRINTH_API")
+		projectId = "1jusBYSH"
+		minecraftVersions.add("1.20.4")
+
+		requires {slug = "fabric-api"}
+		requires {slug = "owo-lib"}
+	}
+
+	discord {
+		webhookUrl = System.getenv("FAE_DISCORD_HOOK")
+	}
+}
 version = project.mod_version
 group = project.maven_group
 
