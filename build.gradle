@@ -11,15 +11,10 @@ publishMods {
 	modLoaders.add("fabric")
 
 	curseforge {
-		accessToken = System.getenv("CURSEFORGE_API")
 		projectId = "972797"
 		minecraftVersions.add("1.20.4")
+		accessToken = System.getenv("CURSEFORGE_API")
 		projectSlug = "fishing-aquatica-expanded"
-
-		javaVersions.add(JavaVersion.VERSION_17)
-
-		clientRequired = true
-		serverRequired = true
 
 		requires {"fabric-api"}
 		requires {"owo-lib"}
