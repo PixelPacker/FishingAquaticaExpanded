@@ -43,13 +43,16 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
         //Audio
         translationBuilder.add("subtitles.fishingaquaticaexpanded.music_crate", "Music Crate Opened");
-
+        /**
+         * Old redundant code that was unused causing issues with datagen
+         * Keeping in case it is needed to manually add translations instead of using datagen for all
         try {
             String filePathString = dataOutput.getModContainer().findPath("assets/fishingaquaticaexpanded/lang/en_us.json").get().toString();
+            Path existingFilePath = dataOutput.getModContainer().findPath("assets/fishingaquaticaexpanded/lang/en_us.json").get();
             File file = new File(filePathString);
 
-            Path existingFilePath = dataOutput.getModContainer().findPath("assets/fishingaquaticaexpanded/lang/en_us.json").get();
             //These lines should be removed, this is stupid but the only workaround I could think of because of a silly exception being thrown from previously added translations
+
             file.setWritable(true);
             BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(existingFilePath.toString()));
             bufferedOutputStream.write("{}".getBytes());
@@ -59,5 +62,6 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+         **/
     }
 }
